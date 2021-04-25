@@ -9,6 +9,7 @@
 .left {
   position: relative;
  width: 60%;
+ height: 100vh;
 }
 
 .right {
