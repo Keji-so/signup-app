@@ -1,38 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
 .App {
-  text-align: center;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  color: #536162;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left {
+  position: relative;
+ width: 60%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.right {
+  position: relative;
+  width: 40%;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.right img {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  color: #96bb7c;
+  font-size: 12px;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  letter-spacing: 5px;
+  font-weight: 600;
+}
+
+
+
+.text-two {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  max-width: 100%;
+  width: 50%;
+  font-size: 34px;
+}
+
+.text-two span {
+  color: #96bb7c;
+}
+
+.names {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-field {
+  width: 45%;
+}
+
+
+
+.sign-in {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sign-in span {
+  color: #a2b29f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sign-in span:hover {
+  border-bottom: 1px solid #a2b29f;
+}
+
+.form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  padding: 15% 0;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.label {
+  padding-top: 5%;
+  padding-bottom: 2%;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.left input {
+  outline: none;
+  border: #e7e6e1 1px solid;
+  width: 100%;
+  background: #f6f6f6;
+  padding: 10px;
+  border-radius: 5px;
+  color: #536162;
+}
+
+.left input::placeholder {
+  padding-left: 5px;
+  color: #aaaaaa;
+}
+
+.button {
+  align-self: center;
+}
+
+.btn {
+  background: #1b1717;
+  color: #a2b29f;
+  padding: 15px 60px;
+  border: transparent;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+  .right {
+   display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .left {
+    width: 100%;
+    }
+
+    .form {
+      position: relative;
+      transform: translate(-50%, -30%);
+    }
+
+    .names {
+      display: block;
+    }
+
+    .name-field {
+        width: 100%;
+}
+
+.label {
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+
+.button {
+  margin-bottom: 30%;
+}
+
+}
+
+
+@media only screen and (max-width: 900px) {
+  .text-two {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .text-two {
+    width: 60%;
   }
 }
